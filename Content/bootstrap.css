@@ -264,10 +264,7 @@ table {
   @page  {
     margin: 2cm .5cm;
   }
-  p
-  {
-    text-align: center;
-  }
+  p,
   h2,
   h3 {
     orphans: 3;
