@@ -215,6 +215,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -222,13 +223,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710231834107_InitialMigration.cs" />
-    <Compile Include="Migrations\201710231834107_InitialMigration.Designer.cs">
-      <DependentUpon>201710231834107_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710241609434_ClonedProject.cs" />
-    <Compile Include="Migrations\201710241609434_ClonedProject.Designer.cs">
-      <DependentUpon>201710241609434_ClonedProject.cs</DependentUpon>
+    <Compile Include="Migrations\201710242053097_price in inventory.cs" />
+    <Compile Include="Migrations\201710242053097_price in inventory.Designer.cs">
+      <DependentUpon>201710242053097_price in inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,6 +307,11 @@
     <Content Include="Views\Managers\Details.cshtml" />
     <Content Include="Views\Managers\Edit.cshtml" />
     <Content Include="Views\Managers\Index.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,11 +322,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710231834107_InitialMigration.resx">
-      <DependentUpon>201710231834107_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710241609434_ClonedProject.resx">
-      <DependentUpon>201710241609434_ClonedProject.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710242053097_price in inventory.resx">
+      <DependentUpon>201710242053097_price in inventory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
