@@ -227,8 +227,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201710251313006_update db after pull.cs" />
-    <Compile Include="Migrations\201710251313006_update db after pull.Designer.cs">
-      <DependentUpon>201710251313006_update db after pull.cs</DependentUpon>
     <Compile Include="Migrations\201710251327002_inventory migration.cs" />
     <Compile Include="Migrations\201710251327002_inventory migration.Designer.cs">
       <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
@@ -338,13 +336,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201710251313006_update db after pull.resx">
-      <DependentUpon>201710251313006_update db after pull.cs</DependentUpon>
-=======
+    
     <EmbeddedResource Include="Migrations\201710251327002_inventory migration.resx">
       <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
->>>>>>> 96b8cdb49057d8bb55e24c14eb927aa2e51bffa4
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
