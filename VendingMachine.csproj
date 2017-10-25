@@ -215,8 +215,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Inventories1Controller.cs" />
+
+    
     <Compile Include="Controllers\MachinesController.cs" />
+
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -227,9 +229,13 @@
     <Compile Include="Migrations\201710251313006_update db after pull.cs" />
     <Compile Include="Migrations\201710251313006_update db after pull.Designer.cs">
       <DependentUpon>201710251313006_update db after pull.cs</DependentUpon>
+    <Compile Include="Migrations\201710251327002_inventory migration.cs" />
+    <Compile Include="Migrations\201710251327002_inventory migration.Designer.cs">
+      <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Controllers\InventoriesController.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Machines.cs" />
@@ -310,16 +316,18 @@
     <Content Include="Views\Managers\Details.cshtml" />
     <Content Include="Views\Managers\Edit.cshtml" />
     <Content Include="Views\Managers\Index.cshtml" />
-    <Content Include="Views\Inventories1\Create.cshtml" />
-    <Content Include="Views\Inventories1\Delete.cshtml" />
-    <Content Include="Views\Inventories1\Details.cshtml" />
-    <Content Include="Views\Inventories1\Edit.cshtml" />
-    <Content Include="Views\Inventories1\Index.cshtml" />
+
     <Content Include="Views\Machines\Create.cshtml" />
     <Content Include="Views\Machines\Delete.cshtml" />
     <Content Include="Views\Machines\Details.cshtml" />
     <Content Include="Views\Machines\Edit.cshtml" />
     <Content Include="Views\Machines\Index.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,8 +338,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201710251313006_update db after pull.resx">
       <DependentUpon>201710251313006_update db after pull.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201710251327002_inventory migration.resx">
+      <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
+>>>>>>> 96b8cdb49057d8bb55e24c14eb927aa2e51bffa4
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
