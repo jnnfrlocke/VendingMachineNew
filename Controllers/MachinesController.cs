@@ -30,7 +30,7 @@ namespace VendingMachineNew.Controllers
             }
             Machines machines = db.Machines.Find(id);
             string url = this.Url.Action("Map", "Machines", null);
-            string link = HttpContext.Request.Url.Scheme + "://" + /*HttpContext.Request.Url.Authority + Url.Action("Map", null, new { key = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJefLj_wsZBYgRbKc_1MALbaY&key=..." });*/
+            //string link = HttpContext.Request.Url.Scheme + "://" + /*HttpContext.Request.Url.Authority + Url.Action("Map", null, new { key = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJefLj_wsZBYgRbKc_1MALbaY&key=..." });*/
 
             if (machines == null)
             {
