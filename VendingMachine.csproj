@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
@@ -215,20 +215,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Inventories1Controller.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="CustomFilter\Filter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710231834107_InitialMigration.cs" />
-    <Compile Include="Migrations\201710231834107_InitialMigration.Designer.cs">
-      <DependentUpon>201710231834107_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710241609434_ClonedProject.cs" />
-    <Compile Include="Migrations\201710241609434_ClonedProject.Designer.cs">
-      <DependentUpon>201710241609434_ClonedProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -311,6 +304,11 @@
     <Content Include="Views\Managers\Details.cshtml" />
     <Content Include="Views\Managers\Edit.cshtml" />
     <Content Include="Views\Managers\Index.cshtml" />
+    <Content Include="Views\Inventories1\Create.cshtml" />
+    <Content Include="Views\Inventories1\Delete.cshtml" />
+    <Content Include="Views\Inventories1\Details.cshtml" />
+    <Content Include="Views\Inventories1\Edit.cshtml" />
+    <Content Include="Views\Inventories1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -319,14 +317,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710231834107_InitialMigration.resx">
-      <DependentUpon>201710231834107_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710241609434_ClonedProject.resx">
-      <DependentUpon>201710241609434_ClonedProject.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

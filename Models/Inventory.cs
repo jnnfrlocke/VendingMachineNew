@@ -15,6 +15,5 @@ namespace VendingMachine.Models
             public int quantity { get; set; }
             public double price { get; set; }
 
-
     }
 }
