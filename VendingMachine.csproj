@@ -215,6 +215,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+
+    
+    <Compile Include="Controllers\MachinesController.cs" />
+
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
@@ -222,6 +226,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710251313006_update db after pull.cs" />
     <Compile Include="Migrations\201710251327002_inventory migration.cs" />
     <Compile Include="Migrations\201710251327002_inventory migration.Designer.cs">
       <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
@@ -232,6 +237,7 @@
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Machines.cs" />
+    <Compile Include="Models\MachinesController.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,11 +314,18 @@
     <Content Include="Views\Managers\Details.cshtml" />
     <Content Include="Views\Managers\Edit.cshtml" />
     <Content Include="Views\Managers\Index.cshtml" />
+
+    <Content Include="Views\Machines\Create.cshtml" />
+    <Content Include="Views\Machines\Delete.cshtml" />
+    <Content Include="Views\Machines\Details.cshtml" />
+    <Content Include="Views\Machines\Edit.cshtml" />
+    <Content Include="Views\Machines\Index.cshtml" />
     <Content Include="Views\Inventories\Create.cshtml" />
     <Content Include="Views\Inventories\Delete.cshtml" />
     <Content Include="Views\Inventories\Details.cshtml" />
     <Content Include="Views\Inventories\Edit.cshtml" />
     <Content Include="Views\Inventories\Index.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +336,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    
     <EmbeddedResource Include="Migrations\201710251327002_inventory migration.resx">
       <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
     </EmbeddedResource>
