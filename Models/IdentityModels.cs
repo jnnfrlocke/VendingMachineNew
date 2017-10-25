@@ -31,5 +31,7 @@ namespace VendingMachine.Models
         }
 
         public System.Data.Entity.DbSet<VendingMachine.Models.Manager> Managers { get; set; }
+
+        public System.Data.Entity.DbSet<VendingMachine.Models.Inventory> Inventories { get; set; }
     }
 }
