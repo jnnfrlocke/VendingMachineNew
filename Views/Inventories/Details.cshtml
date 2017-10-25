@@ -1,17 +1,10 @@
 ﻿@model VendingMachine.Models.Inventory
 
 @{
-    Layout = null;
+    ViewBag.Title = "Details";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h2>Details</h2>
     <div>
         <h4>Inventory</h4>
         <hr />
@@ -54,5 +47,3 @@
         @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
-</body>
-</html>

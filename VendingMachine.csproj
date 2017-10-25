@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201710251632378_Add lat &amp; long to machines.Designer.cs">
       <DependentUpon>201710251632378_Add lat &amp; long to machines.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710251527271_model migration.cs" />
+    <Compile Include="Migrations\201710251527271_model migration.Designer.cs">
+      <DependentUpon>201710251527271_model migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Controllers\InventoriesController.cs" />
@@ -339,6 +343,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710251632378_Add lat &amp; long to machines.resx">
       <DependentUpon>201710251632378_Add lat &amp; long to machines.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710251327002_inventory migration.resx">
+      <DependentUpon>201710251327002_inventory migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251527271_model migration.resx">
+      <DependentUpon>201710251527271_model migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

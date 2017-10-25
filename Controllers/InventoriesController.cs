@@ -59,7 +59,7 @@ namespace VendingMachineNew.Models
                 itemInDB.price = inventory.price;
             }
             db.SaveChanges();
-            return RedirectToAction("Index", "Inventory");
+            return RedirectToAction("Index", "Inventories");
         }
 
         // GET: Inventories/Edit/5
