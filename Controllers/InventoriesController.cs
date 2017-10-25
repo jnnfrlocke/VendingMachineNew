@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using VendingMachine.Models;
 
-namespace VendingMachineNew.Controllers
+namespace VendingMachineNew.Models
 {
     public class InventoriesController : Controller
     {
@@ -128,4 +129,3 @@ namespace VendingMachineNew.Controllers
         }
     }
 }
-
