@@ -1,22 +1,18 @@
 ﻿@model IEnumerable<VendingMachine.Models.Inventory>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
+<h2>Index</h2>
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
     <table class="table">
         <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.typeProduct)
             </th>
@@ -26,12 +22,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.quantity)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.typeProduct)
             </td>
@@ -42,6 +44,9 @@
                 @Html.DisplayFor(modelItem => item.quantity)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>   
+            <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.id })
             </td>
@@ -49,5 +54,3 @@
         }
 
     </table>
-</body>
-</html>
