@@ -21,9 +21,9 @@ namespace VendingMachineNew
         static async Task SendSms()
         {
             // Your Account SID from twilio.com/console
-            var accountSid = "AC745137d20b51ab66c4fd18de86d3831c";
+            var accountSid = "x";
             // Your Auth Token from twilio.com/console
-            var authToken = "789153e001d240e55a499bf070e75dfe";
+            var authToken = "x";
 
             TwilioClient.Init(accountSid, authToken);
 
