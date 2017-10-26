@@ -237,8 +237,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201710251346314_PullBeforeStripeBranch.cs" />
-    <Compile Include="Migrations\201710251346314_PullBeforeStripeBranch.Designer.cs"></Compile>
-      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon>
+    <Compile Include="Migrations\201710251346314_PullBeforeStripeBranch.Designer.cs">
+      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon></Compile>
     <Compile Include="Migrations\201710251313006_update db after pull.cs" />
     <Compile Include="Migrations\201710251537414_Update after pull.cs" />
     <Compile Include="Migrations\201710251537414_Update after pull.Designer.cs">
@@ -251,7 +251,6 @@
     <Compile Include="Migrations\201710260132361_Machine Controller.cs" />
     <Compile Include="Migrations\201710260132361_Machine Controller.Designer.cs">
       <DependentUpon>201710260132361_Machine Controller.cs</DependentUpon>
->>>>>>> 0799f4646bad033d2dbaccb0768edfa8852abf67
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -360,8 +359,8 @@
   </ItemGroup>
   <ItemGroup>
 
-    <EmbeddedResource Include="Migrations\201710251346314_PullBeforeStripeBranch.resx"></EmbeddedResource>
-      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710251346314_PullBeforeStripeBranch.resx">
+      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon></EmbeddedResource>
 
     <EmbeddedResource Include="Migrations\201710251537414_Update after pull.resx">
       <DependentUpon>201710251537414_Update after pull.cs</DependentUpon>
