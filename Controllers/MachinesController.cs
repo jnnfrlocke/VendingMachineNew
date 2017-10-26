@@ -22,21 +22,9 @@ namespace VendingMachineNew.Controllers
         }
 
         // GET: Machines/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Machines machines = db.Machines.Find(id);
-            string url = this.Url.Action("Map", "Machines", null);
-            //string link = HttpContext.Request.Url.Scheme + "://" + /*HttpContext.Request.Url.Authority + Url.Action("Map", null, new { key = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJefLj_wsZBYgRbKc_1MALbaY&key=..." });*/
-
-            if (machines == null)
-            {
-                return HttpNotFound();
-            }
-            return View(machines);
+            return View(db.Machines.ToList());
         }
 
         // GET: Machines/Create
