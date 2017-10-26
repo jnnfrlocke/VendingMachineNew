@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201710251913130_update.Designer.cs">
       <DependentUpon>201710251913130_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710260132361_Machine Controller.cs" />
+    <Compile Include="Migrations\201710260132361_Machine Controller.Designer.cs">
+      <DependentUpon>201710260132361_Machine Controller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Controllers\InventoriesController.cs" />
@@ -339,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710251913130_update.resx">
       <DependentUpon>201710251913130_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710260132361_Machine Controller.resx">
+      <DependentUpon>201710260132361_Machine Controller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
