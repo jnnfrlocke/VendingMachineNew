@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using VendingMachine.Models;
 
-namespace VendingMachineNew.Controllers
+namespace VendingMachineNew.Models
 {
     public class InventoriesController : Controller
     {
@@ -58,7 +59,7 @@ namespace VendingMachineNew.Controllers
                 itemInDB.price = inventory.price;
             }
             db.SaveChanges();
-            return RedirectToAction("Index", "Inventory");
+            return RedirectToAction("Index", "Inventories");
         }
 
         // GET: Inventories/Edit/5
@@ -89,7 +90,7 @@ namespace VendingMachineNew.Controllers
             itemInDB.quantity = inventory.quantity;
             itemInDB.price = inventory.price;
             db.SaveChanges();
-            return RedirectToAction("Index", "Customers");
+            return RedirectToAction("Index", "Inventories");
         }
 
         // GET: Inventories/Delete/5
@@ -128,4 +129,3 @@ namespace VendingMachineNew.Controllers
         }
     }
 }
-
