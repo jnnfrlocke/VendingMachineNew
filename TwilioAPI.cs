@@ -34,4 +34,5 @@ namespace VendingMachineNew
 
             Console.WriteLine(message.Sid);
         }
+    }
 }
