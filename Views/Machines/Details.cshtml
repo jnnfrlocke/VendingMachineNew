@@ -8,37 +8,104 @@
 
 <div>
     <h4>Machines</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Address)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Address)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.City)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.City)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.State)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.State)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Map)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Map)
-            </dd>
-        </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<html>
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+             }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Map)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Map)
+        </dd>
+    </dl>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    <script>
+        function initMap(lat, lng) {
+            if(@Model.Address == "1025 N Broadway")
+            {
+                var latlng = new google.maps.LatLng(43.0439271, -87.9065172)
+            }
+            else if(@Model.Address == "1442 W Wisconsin Ave")
+            {
+                var latlng = new google.maps.LatLng(43.0395852, -87.9315083)
+            }
+            else if(@Model.Address == "2200 E Kenwood Blvd")
+            {
+                var latlng = new google.maps.LatLng(43.0750728, -87.8835232)
+            }
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { latlng },
+                zoom: 15
+            });
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+            var geocoder = new google.maps.Geocoder;
+            var infowindow = new google.maps.InfoWindow;
+
+            document.getElementById('submit').addEventListener('click', function () {
+                geocodePlaceId(geocoder, map, infowindow);
+            });
+        }
+        function geocodePlaceId(geocoder, map, infowindow) {
+            var placeId = document.getElementById('place-id').value;
+            geocoder.geocode({ 'placeId': placeId }, function (results, status) {
+                if (status === 'OK') {
+                    if (results[0]) {
+                        map.setZoom(15);
+                        map.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location
+                        });
+                        infowindow.setContent(results[0].formatted_address);
+                        infowindow.open(map, marker);
+                    } else {
+                        window.alert('No results found');
+                    }
+                } else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaLHWLfupl9Gk9V1rjEW2GH6a2vvcZiOU&callback=initMap">
+    </script>
+</body>
+</html>
+
 
 
